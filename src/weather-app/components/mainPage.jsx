@@ -5,7 +5,7 @@ import {DataCard} from "./dataCard.jsx";
 
 export const MainPage = () => {
     const [city, setCity] = useState('london');
-    const personalKey = 'ddce8bcfbce5012d2468f3b69d980c7e';
+    const personalKey = import.meta.env.VITE_WEATHER_API_KEY;
     const api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${personalKey}&units=metric`
 
     const [data, setData] = useState('');
