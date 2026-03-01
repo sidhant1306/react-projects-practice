@@ -1,0 +1,212 @@
+/* Password Generator CSS */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Inter:wght@400;600&display=swap');
+
+/* Body styling */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+    font-family: 'Inter', sans-serif;
+}
+
+/* Main Container */
+.generator-container {
+    background: #12182e;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border: 1px solid #2a3350;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Password Input */
+.password-input {
+    width: 100%;
+    padding: 18px 20px;
+    background: #1a2140;
+    border: 2px solid #2a3350;
+    border-radius: 12px;
+    color: #ffffff;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.password-input:focus {
+    border-color: #00ff88;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+.password-input::selection {
+    background: #00ff88;
+    color: #0a0e27;
+}
+
+/* Copy Button */
+.copy-button {
+    width: 100%;
+    padding: 14px 20px;
+    background: #00ff88;
+    color: #0a0e27;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.copy-button:hover {
+    background: #00cc6a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 255, 136, 0.4);
+}
+
+.copy-button:active {
+    transform: translateY(0);
+}
+
+/* Range Slider */
+.range-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #1a2140;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+.range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    background: #00ff88;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.range-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.8);
+}
+
+.range-slider::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+    background: #00ff88;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.range-slider::-moz-range-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.8);
+}
+
+/* Length Label */
+.length-label {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 5px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Checkbox Input */
+.checkbox-input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #2a3350;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    background: transparent;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.checkbox-input:checked {
+    background: #00ff88;
+    border-color: #00ff88;
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
+}
+
+.checkbox-input:checked::after {
+    content: '✓';
+    position: absolute;
+    color: #0a0e27;
+    font-size: 14px;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Checkbox Label */
+.checkbox-label {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    vertical-align: middle;
+    user-select: none;
+}
+
+.checkbox-label:hover {
+    color: #00ff88;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .generator-container {
+        padding: 30px 20px;
+    }
+
+    .password-input {
+        padding: 16px;
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+
+    .copy-button {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .generator-container {
+        padding: 25px 15px;
+    }
+
+    .password-input {
+        font-size: 0.9rem;
+    }
+}
