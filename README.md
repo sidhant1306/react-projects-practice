@@ -1,16 +1,26 @@
-# React + Vite
+# React Projects Practice
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A collection of React projects built while learning React from scratch. Each project focuses on specific concepts and hooks.
 
-Currently, two official plugins are available:
+## Projects
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+| Project | Concepts Learned |
+|---|---|
+| Counter App | useState, event handling |
+| BMI Calculator | Forms, validation, calculations |
+| Weather App | fetch API, async/await, API integration, error handling |
+| Password Generator | useCallback, useRef, useEffect |
+| Todo App | Context API, localStorage, CRUD |
+| Task Manager | Multi-context, React Router, protected routes, user auth (localStorage) |
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 18
+- React Router DOM
+- Context API
+- localStorage
+- Vite
 
-## Expanding the ESLint configuration
+## Notes
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+These are learning projects, not production apps. Built independently.
